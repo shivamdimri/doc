@@ -1,0 +1,72 @@
+/* Navbar.css */
+nav {
+    background-color: #005555;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50px;
+    font-size: 1.2rem;
+  }
+  
+  .logo p{
+    font-size: 2rem;
+    background: white;
+    color: #eef106;
+  }
+  
+  .nav-links {
+    display: flex;
+    list-style: none;
+  }
+  
+  .nav-links li {
+    padding: 0 20px;
+  }
+  
+  .nav-links a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  .nav-links a:hover {
+    color: #eef106;
+  }
+  
+  .active {
+    color: #eef106;
+  }
+  
+  .checkbtn {
+    font-size: 30px;
+    cursor: pointer;
+    color: #fff;
+    display: none;
+  }
+  
+  #check {
+    display: none;
+  }
+  
+  @media (max-width: 768px) {
+    .checkbtn {
+      display: block;
+    }
+    .nav-links {
+      position: fixed;
+      right: 0px;
+      height: 100vh;
+      top: 80px;
+      background-color: #005555;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 50%;
+      transform: translateX(100%);
+      transition: transform 0.5s ease-in;
+    }
+    .nav-links.active {
+      transform: translateX(0%);
+    }
+  }
+  
